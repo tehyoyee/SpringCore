@@ -9,9 +9,11 @@ import org.springframework.context.annotation.FilterType;
 
  // @Component는 빈에 등록 , AppConfig빼기위해 제외항목도 설정
 @Configuration
+//@ComponentScan
 @ComponentScan (
 //		basePackages = "hello.core.member",
-//		excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
+		excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
+
 public class AutoAppConfig {
 }
